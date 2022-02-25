@@ -16,8 +16,7 @@
 .App-header {
   display: flex;
   padding: 16px;
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid #b9b9b9;
 }
 
 @keyframes App-logo-spin {

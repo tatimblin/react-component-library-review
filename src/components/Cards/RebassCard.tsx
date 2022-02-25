@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+
 import React from 'react';
 import {
   Card,
@@ -10,15 +12,19 @@ import { IProps } from '../Card';
 
 const RebassCard: React.FC<IProps> = ({ title, body, image, cta }) => {
   return (
-    <Card>
+    <Card sx={{ backgroundColor: 'background' }}>
       <Image src={image.src} alt={image.alt} />
-      <Heading as='h3'>
-        {title}
-      </Heading>
-      <Text fontSize={0}>
-        {body}
-      </Text>
-      <Link href='https://rebassjs.org'>Link</Link>
+      <div sx={{ padding: 2 }}>
+        <Heading as='h3' sx={{ variant: 'text.heading' }}>
+          {title}
+        </Heading>
+        <Text>
+          {body}
+        </Text>
+        <Link href='https://rebassjs.org' sx={{ variant: 'links.primary' }}>
+          Link
+        </Link>
+      </div>
     </Card>
   );
 }
