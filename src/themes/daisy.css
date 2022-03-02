@@ -1,0 +1,74 @@
+.theme-default .btn {
+  @apply inline-block px-4 py-3;
+}
+
+.theme-default .btn--primary {
+  @apply bg-buttonPrimary text-buttonPrimary;
+}
+
+.theme-default .heading {
+  @apply font-head font-bold;
+}
+
+.theme-default .heading--head {
+  @apply text-2xl;
+}
+
+.theme-default .card
+{
+  @apply bg-white;
+}
+
+.card > div {
+  @apply px-4 py-2;
+}
+
+/* subway */
+
+.theme-subway .btn {
+  @apply block px-4 py-3 rounded-full;
+}
+
+.theme-subway .btn--primary {
+  @apply bg-green-600 text-buttonPrimary;
+}
+
+.theme-subway .heading {
+  @apply font-head font-bold;
+}
+
+.theme-subway .heading--head {
+  @apply text-2xl text-green-600;
+}
+
+.theme-subway .card
+{
+  @apply bg-white;
+}
+
+/* verizon */
+
+.theme-verizon .btn {
+  @apply inline-block px-4 py-3;
+}
+
+.theme-verizon .btn--primary {
+  @apply bg-red-600 text-buttonPrimary uppercase;
+}
+
+.theme-verizon .heading {
+  @apply font-head font-bold;
+}
+
+.theme-verizon .heading--head {
+  @apply text-2xl text-red-600;
+}
+
+.theme-verizon .body {
+  @apply text-lg text-white;
+}
+
+.theme-verizon .card
+{
+  @apply bg-black;
+}

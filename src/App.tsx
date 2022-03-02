@@ -5,7 +5,13 @@ import { EuiProvider } from '@elastic/eui';
 import { AppProvider } from '@shopify/polaris';
 import { ThemeProvider } from 'theme-ui';
 import {
-  CustomCard, MUICard, ChakraCard, ElasticCard, ShopifyCard, RebassCard
+  CustomCard,
+  MUICard,
+  ChakraCard,
+  ElasticCard,
+  ShopifyCard,
+  RebassCard,
+  DaisyCard
 } from './components/Card';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import { ThemeList, themeuiThemes} from './themes/ThemeUI';
@@ -34,7 +40,7 @@ function App() {
   }
 
   return (
-    <div className="App bg-gray-100 min-h-screen">
+    <div className={`App bg-gray-100 min-h-screen theme-${theme}`}>
       <header className="App-header justify-between items-center">
         <img src={logo} className="App-logo" alt="logo" />
         <label>
@@ -90,6 +96,12 @@ function App() {
             cta={cta}
           />
         </ThemeProvider>
+        <DaisyCard
+          title="Daisy UI"
+          body="Perfect interfaces everywhere, we always have and we always will."
+          image={image}
+          cta={cta}
+        />
       </section>
     </div>
   );
