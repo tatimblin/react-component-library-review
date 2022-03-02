@@ -3,14 +3,14 @@ import { makeTheme } from '@theme-ui/css/utils';
 import { Theme } from 'theme-ui';
 
 const heading = {
-  color: 'text',
-  fontFamily: 'heading',
-  lineHeight: 'heading',
-  fontWeight: 'heading',
+  fontFamily: 'text.heading',
+  lineHeight: 'text.heading',
+  fontWeight: 'text.heading',
 }
 
-const themeuiBase : Theme = makeTheme({
+const themeuiBase : Theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
@@ -23,10 +23,10 @@ const themeuiBase : Theme = makeTheme({
   },
   styles: {
     root: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-      color: 'text',
+      fontFamily: 'sans-serif',
+      lineHeight: 1,
+      fontWeight: 400,
+      color: '#000',
     },
     h1: {
       ...heading,
@@ -53,10 +53,10 @@ const themeuiBase : Theme = makeTheme({
       fontSize: 0,
     },
     p: {
-      color: 'text',
-      fontFamily: 'body',
-      fontWeight: 'body',
-      lineHeight: 'body',
+      fontFamily: 'sans-serif',
+      lineHeight: 1,
+      fontWeight: 400,
+      color: '#000',
     },
     a: {
       color: 'primary',
@@ -89,11 +89,10 @@ const themeuiBase : Theme = makeTheme({
       maxWidth: '100%',
     },
   },
-});
+};
 
 export const themeuiThemes : { [key: string]: Theme } = {
-  default: {
-    ...themeuiBase,
+  default: makeTheme({
     fonts: {
       body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
       heading: 'inherit',
@@ -106,10 +105,17 @@ export const themeuiThemes : { [key: string]: Theme } = {
       secondary: '#F2BF56',
       muted: '#f6f6f6',
     },
+    ...themeuiBase,
     text: {
       heading: {
-        color: 'red',
+        fontFamily: 'heading',
+        fontWeight: 'heading',
+        lineHeight: 'heading',
+        color: 'primary',
       },
+      base: {
+        fontSize: 1,
+      }
     },
     links: {
       primary: {
@@ -124,9 +130,8 @@ export const themeuiThemes : { [key: string]: Theme } = {
         backgroundColor: 'background',
       },
     },
-  },
-  subway: {
-    ...themeuiBase,
+  }),
+  subway: makeTheme({
     fonts: {
       body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
       heading: 'inherit',
@@ -138,9 +143,16 @@ export const themeuiThemes : { [key: string]: Theme } = {
       primary: '#009743',
       seondary: '#FFCB0A',
     },
+    ...themeuiBase,
     text: {
       heading: {
-        color: 'red',
+        fontFamily: 'heading',
+        fontWeight: 'heading',
+        lineHeight: 'heading',
+        color: 'primary',
+      },
+      base: {
+        fontSize: 1,
       },
     },
     links: {
@@ -149,6 +161,7 @@ export const themeuiThemes : { [key: string]: Theme } = {
         color: 'white',
         padding: '10px 20px',
         display: 'block',
+        borderRadius: 20,
       },
     },
     cards: {
@@ -156,9 +169,8 @@ export const themeuiThemes : { [key: string]: Theme } = {
         backgroundColor: 'background',
       },
     },
-  },
-  verizon: {
-    ...themeuiBase,
+  }),
+  verizon: makeTheme({
     fonts: {
       body: '"Helvetica Neue", sans-serif',
       heading: '"Helvetica Neue", sans-serif',
@@ -169,10 +181,17 @@ export const themeuiThemes : { [key: string]: Theme } = {
       background: '#000000',
       primary: '#EE0000',
     },
+    ...themeuiBase,
     text: {
       heading: {
-        color: 'primary',
         fontFamily: 'heading',
+        fontWeight: 'heading',
+        lineHeight: 'heading',
+        color: 'primary',
+      },
+      base: {
+        color: 'text',
+        fontSize: 2,
       },
     },
     links: {
@@ -191,7 +210,7 @@ export const themeuiThemes : { [key: string]: Theme } = {
         backgroundColor: 'background',
       },
     },
-  },
+  }),
 };
 
 export const ThemeList : string[] = Object.keys(themeuiThemes);

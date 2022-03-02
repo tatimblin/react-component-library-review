@@ -8,7 +8,7 @@ import {
   CustomCard, MUICard, ChakraCard, ElasticCard, ShopifyCard, RebassCard
 } from './components/Card';
 import enTranslations from '@shopify/polaris/locales/en.json';
-import { ThemeList, themeuiThemes} from './themes';
+import { ThemeList, themeuiThemes} from './themes/ThemeUI';
 
 import './App.css';
 import '@elastic/eui/dist/eui_theme_light.css';

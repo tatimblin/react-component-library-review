@@ -18,7 +18,10 @@ const RebassCard: React.FC<IProps> = ({ title, body, image, cta }) => {
         <Heading as='h3' sx={{ variant: 'text.heading' }}>
           {title}
         </Heading>
-        <Text>
+        <Text sx={{
+          variant: 'text.base',
+          pb: 3,
+        }}>
           {body}
         </Text>
         <Link href='https://rebassjs.org' sx={{ variant: 'links.primary' }}>
