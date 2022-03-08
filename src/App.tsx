@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { EuiProvider } from '@elastic/eui';
-import { AppProvider } from '@shopify/polaris';
 import { ThemeProvider } from 'theme-ui';
 import {
   CustomCard,
@@ -13,14 +11,11 @@ import {
   RebassCard,
   DaisyCard
 } from './components/Card';
-import enTranslations from '@shopify/polaris/locales/en.json';
 import { ThemeList, themeuiThemes} from './themes/ThemeUI';
 
 import './App.css';
 import '@elastic/eui/dist/eui_theme_light.css';
 import '@shopify/polaris/build/esm/styles.css';
-
-const chakraTheme = extendTheme({});
 
 function App() {
 
@@ -64,14 +59,13 @@ function App() {
           image={image}
           cta={cta}
         />
-        <ChakraProvider theme={chakraTheme}>
-          <ChakraCard
-            title="Chakra UI"
-            body="A simple, modular and accessible component library that gives you the building blocks you need to build your React applications."
-            image={image}
-            cta={cta}
-          />
-        </ChakraProvider>
+        <ChakraCard
+          title="Chakra UI"
+          body="A simple, modular and accessible component library that gives you the building blocks you need to build your React applications."
+          image={image}
+          cta={cta}
+          theme={theme}
+        />
         <EuiProvider colorMode="light">
         <ElasticCard
             title="Elastic UI"
@@ -80,14 +74,12 @@ function App() {
             cta={cta}
           />
         </EuiProvider>
-        <AppProvider i18n={enTranslations}>
-          <ShopifyCard
-            title="Shopify Polaris"
-            body="Polaris React is a component library designed to help developers create the best experience for merchants who use Shopify."
-            image={image}
-            cta={cta}
-          />
-        </AppProvider>
+        <ShopifyCard
+          title="Shopify Polaris"
+          body="Polaris React is a component library designed to help developers create the best experience for merchants who use Shopify."
+          image={image}
+          cta={cta}
+        />
         <ThemeProvider theme={themeuiThemes[theme]}>
           <RebassCard
             title="Rebass"

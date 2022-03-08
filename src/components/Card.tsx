@@ -21,6 +21,7 @@ interface IProps {
   body: string
   image: Image
   cta: CTA
+  theme?: string
 }
 
 export {
