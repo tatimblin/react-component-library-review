@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-component-library-review/static/css/main.abd635ab.css",
-    "main.js": "/react-component-library-review/static/js/main.6fa3d3a8.js",
+    "main.css": "/react-component-library-review/static/css/main.47c74791.css",
+    "main.js": "/react-component-library-review/static/js/main.361b64a3.js",
     "icon.accessibility.js": "/react-component-library-review/static/js/icon.accessibility.f6218ebd.chunk.js",
     "icon.aggregate.js": "/react-component-library-review/static/js/icon.aggregate.1a2e3956.chunk.js",
     "icon.alert.js": "/react-component-library-review/static/js/icon.alert.fe2e4de4.chunk.js",
@@ -444,8 +444,8 @@
     "static/js/787.a6d11917.chunk.js": "/react-component-library-review/static/js/787.a6d11917.chunk.js",
     "static/media/logo.svg": "/react-component-library-review/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-component-library-review/index.html",
-    "main.abd635ab.css.map": "/react-component-library-review/static/css/main.abd635ab.css.map",
-    "main.6fa3d3a8.js.map": "/react-component-library-review/static/js/main.6fa3d3a8.js.map",
+    "main.47c74791.css.map": "/react-component-library-review/static/css/main.47c74791.css.map",
+    "main.361b64a3.js.map": "/react-component-library-review/static/js/main.361b64a3.js.map",
     "icon.accessibility.f6218ebd.chunk.js.map": "/react-component-library-review/static/js/icon.accessibility.f6218ebd.chunk.js.map",
     "icon.aggregate.1a2e3956.chunk.js.map": "/react-component-library-review/static/js/icon.aggregate.1a2e3956.chunk.js.map",
     "icon.alert.fe2e4de4.chunk.js.map": "/react-component-library-review/static/js/icon.alert.fe2e4de4.chunk.js.map",
@@ -888,7 +888,7 @@
     "787.a6d11917.chunk.js.map": "/react-component-library-review/static/js/787.a6d11917.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abd635ab.css",
-    "static/js/main.6fa3d3a8.js"
+    "static/css/main.47c74791.css",
+    "static/js/main.361b64a3.js"
   ]
 }
